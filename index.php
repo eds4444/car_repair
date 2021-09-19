@@ -1,4 +1,4 @@
 <?php
 echo "lsknvsn";
-echo "lbneo";
+echo "lb";
 ?>
