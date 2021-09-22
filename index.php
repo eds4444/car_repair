@@ -1,3 +1,4 @@
-<?php
-echo "";
-?>
+<?php get_header(); ?>
+
+
+<?php get_footer(); ?>
