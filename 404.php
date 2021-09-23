@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Error 404</title>
-	<link rel="stylesheet" href="C:\openserver\domains\wordpress\wp-content\themes\car_repair\style.css">
+	<?php wp_head(); ?>
+
 </head>
 <body>
 
