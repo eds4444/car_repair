@@ -6,9 +6,10 @@
 	<?php wp_head(); ?>
 
 </head>
+
 <body>
 
-    <a href="#" class="return">Вернуться на главную</a>
+    <a href="<?php bloginfo( 'url' ); ?>" class="return">Вернуться на главную</a>
 	   <div class="numberError">
 	        <h1 class="error" data-text="404">404</h1>
 	    </div>

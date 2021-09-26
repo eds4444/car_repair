@@ -16,10 +16,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-   <!-- Script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.ico" > 
@@ -43,7 +39,10 @@
          <div class="twelve columns">
 
             <div class="logo">
-               <a href="index.html"><img alt="" src="images/logo.png"></a>
+
+               <a href="<?php bloginfo( 'url' ); ?>">
+                   <div><?php bloginfo( 'name' ); ?></div>
+                  <img alt="" src="images/logo.png"></a>
             </div>
 
             <nav id="nav-wrap">
@@ -53,7 +52,7 @@
 
                <ul id="nav" class="nav">
 
-	               <li class="current"><a href="index.htm">Home</a></li>
+	               <li class="current"><a href="index.php">Home</a></li>
 	               <li><span><a href="blog.html">Blog</a></span>
                      <ul>
                         <li><a href="blog.html">Blog Index</a></li>
