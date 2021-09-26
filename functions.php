@@ -2,7 +2,11 @@
 
 add_action( 'wp_enqueue_scripts', 'theme_styles');
 add_action( 'wp_footer', 'theme_scripts');
+add_action( 'after_setup_theme', 'theme_register_nav_menu');//регистрация меню
 
+function theme_register_nav_menu() {
+	register_nav_menu( 'top', 'Mеню в шапке' );
+}
 
 function theme_styles() {
     wp_enqueue_style( 'style', get_stylesheet_uri());

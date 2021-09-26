@@ -86,7 +86,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { quotes: #8220 #8220; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -430,8 +430,8 @@ dd { margin: 0 0 0 20px; }
    background: #838A91;
    color: #fff;
 }
-.pagination .current,
-.pagination .current:hover {
+.pagination .current-menu-item,
+.pagination .current-menu-item:hover {
    background-color: #11ABB0;
    color: #fff;
 }
