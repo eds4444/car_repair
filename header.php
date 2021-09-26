@@ -54,7 +54,7 @@
 
                <?php wp_nav_menu( [
                         'theme_location'  => 'top',
-                        'container'       => 'null',
+                        'container'       =>  null,
                         'menu_class'      => 'nav',
                         'menu_id'         => 'nav',
                      ] ); ?>

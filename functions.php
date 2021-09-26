@@ -6,6 +6,8 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu');//регистрац
 
 function theme_register_nav_menu() {
 	register_nav_menu( 'top', 'Mеню в шапке' );
+    register_nav_menu( 'footer', 'Mеню в подвале' );
+
 }
 
 function theme_styles() {
@@ -24,8 +26,8 @@ function theme_scripts() {
     wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
     wp_enqueue_script( 'jquery' );
 
-    wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js',['jquery'], false, null, true);
-    wp_enqueue_script( 'doubletaptogo', get_template_directory_uri() . '/assets/js/jquery.doubletaptogo.js',['jquery'], false, null, true);
+    wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js',['jquery'], null, true);
+    wp_enqueue_script( 'doubletaptogo', get_template_directory_uri() . '/assets/js/jquery.doubletaptogo.js',['jquery'], null, true);
     wp_enqueue_script( 'init', get_template_directory_uri() . '/assets/js/init.js',['jquery'], null, true);
     //wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', null, null, false);
 }
