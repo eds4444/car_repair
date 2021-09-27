@@ -19,8 +19,11 @@
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.ico" > 
+
+   <?php wp_enqueue_script('jquery'); ?>
     
     <?php wp_head(); ?>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 

@@ -36,7 +36,7 @@
     methods = {
       init: function() {
         slider.animating = false;
-        // Get current-menu-item slide and make sure it is a number
+        // Get current slide and make sure it is a number
         slider.currentSlide = parseInt( ( slider.vars.startAt ? slider.vars.startAt : 0) );
         if ( isNaN( slider.currentSlide ) ) slider.currentSlide = 0;
         slider.animatingTo = slider.currentSlide;
