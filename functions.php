@@ -5,6 +5,18 @@ add_action( 'wp_footer', 'theme_scripts');
 add_action( 'after_setup_theme', 'theme_register_nav_menu');//регистрация меню,title-tag (генеритует title в head)
 add_action( 'widgets_init', 'register_my_widgets' );//регистрация сайдбар
 
+add_filter( 'document_title_separator', 'my_sep' ); //Фильтрует (меняет) разделитель заголовка документа, по умолчанию тире
+function my_sep( $sep ){	
+    $sep = ' | ';
+	return $sep;
+}
+
+add_filter( 'the_content', 'test_content'); //фильтр добавляет фразу после текста поста
+function test_content($content){
+    $content.= 'Спасибо за прочтение!';
+    return $content;
+}
+
 function theme_register_nav_menu() {
 	register_nav_menu( 'top', 'Mеню в шапке' );
     register_nav_menu( 'footer', 'Mеню в подвале' );
