@@ -412,8 +412,8 @@ dd { margin: 0 0 0 20px; }
    padding: 6px 10px;
    margin-right: 3px;
    margin-bottom: 6px;
-	color: #6E757C;
-	background-color: #E6E8EB;
+	color: #6D7E7E;
+	background-color: #D3D9D9;
 
 	-webkit-transition: all 200ms ease-in-out;
 	-moz-transition: all 200ms ease-in-out;
@@ -427,7 +427,7 @@ dd { margin: 0 0 0 20px; }
 	border-radius: 3px;
 }
 .pagination .page-numbers:hover {
-   background: #838A91;
+   background: #11ABB0;
    color: #fff;
 }
 .pagination .current-menu-item,
