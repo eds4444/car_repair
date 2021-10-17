@@ -48,15 +48,12 @@
             </div>
 
             <div class="post-thumb">
-                <a href="single.html" title=""><img src="images/post-image/post-image-1300x500-01.jpg" alt="post-image" title="post-image"></a>
+                <a href="<?php the_permalink();//картинка становиться ссылкой при нажатии на нее?>" title=""><?php the_post_thumbnail('post_thumb') ?></a>
             </div>
 
             <div class="post-content">
 
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
-                ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. </p>
+               <?php the_excerpt(); //Выводит "отрывок" (цитату) поста или первые 55 слов контента, со вставкой в конец [...]?>
 
             </div>
 
