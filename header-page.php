@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 
    <!--- Basic Page Needs
    ================================================== -->
-   <meta charset="utf-8">
-	<title>page</title>
-	<meta name="description" content="">
+   <meta charset="<?php bloginfo('charset');  ?>">
+	<meta name="description" content="<?php bloginfo('description');  ?>">
 	<meta name="author" content="">
 
    <!-- Mobile Specific Metas
@@ -20,16 +19,11 @@
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.ico" > 
 
-   <?php wp_enqueue_script('jquery'); ?>
-    
     <?php wp_head(); ?>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 
-<body>
-   
-   
+<body> 
    
   
    <!-- Header

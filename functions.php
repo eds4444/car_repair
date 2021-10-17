@@ -2,12 +2,13 @@
 
 add_action( 'wp_enqueue_scripts', 'theme_styles');
 add_action( 'wp_footer', 'theme_scripts');
-add_action( 'after_setup_theme', 'theme_register_nav_menu');//регистрация меню
+add_action( 'after_setup_theme', 'theme_register_nav_menu');//регистрация меню,title-tag (генеритует title в head)
 add_action( 'widgets_init', 'register_my_widgets' );//регистрация сайдбар
 
 function theme_register_nav_menu() {
 	register_nav_menu( 'top', 'Mеню в шапке' );
     register_nav_menu( 'footer', 'Mеню в подвале' );
+    add_theme_support( 'title-tag' );
 
 }
 
