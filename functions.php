@@ -90,5 +90,20 @@ function register_my_widgets(){
 	) );
 }
 
+add_shortcode( 'iframe', 'Generate_iframe' );//создать шорткод, чтобы потом через него вставлять iframe
+
+function Generate_iframe( $atts ) {
+	$atts = shortcode_atts( array(
+		'href'   => 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Kar-go_Data_Gathering_Vehicle.gif',
+		'height' => '600px',
+		'width'  => '800px',     
+	), $atts );
+
+	return '<iframe src="'. $atts['href'] .'" width="'. $atts['width'] .'" height="'. $atts['height'] .'"> <p>Your Browser does not support Iframes.</p></iframe>';
+}
+
+// использование: 
+// [iframe href="https://upload.wikimedia.org/wikipedia/commons/b/b7/Kar-go_Data_Gathering_Vehicle.gif" height="600" width="800"]
+
 
 ?>
