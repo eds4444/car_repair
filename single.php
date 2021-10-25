@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php  echo get_post_format() //показывает формат поста?>
+<?php // echo get_post_format() //показывает формат поста?>
 
 <?php the_post(); //Устанавливает индексы поста в Цикле WP?>
 
