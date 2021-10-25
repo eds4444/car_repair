@@ -2,7 +2,7 @@
 
 <?php // echo get_post_format() //показывает формат поста?>
 
-<?php the_post(); //Устанавливает индексы поста в Цикле WP?>
+<?php if ( have_posts()) : while ( have_posts()) : the_post(); //Устанавливает индексы поста в Цикле WP?>
 
 <!-- Content
 ================================================== -->
@@ -64,6 +64,9 @@
     </div>
 
 </section> <!-- Tweets Section End-->
+
+<?php endwhile; ?>
+<?php endif; ?>
 
 <!-- footer
 ================================================== -->
