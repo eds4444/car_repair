@@ -1,21 +1,8 @@
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 
-<!-- Page Title
-================================================== -->
-<div id="page-title">
+<?php  echo get_post_format() //показывает формат поста?>
 
-    <div class="row">
-
-        <div class="ten columns centered text-center">
-        <h1>страница с постом<span>.</span></h1>
-
-        <p>Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi
-        enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu. </p>
-        </div>
-
-    </div>
-
-</div> <!-- Page Title End-->
+<?php the_post(); //Устанавливает индексы поста в Цикле WP?>
 
 <!-- Content
 ================================================== -->
@@ -25,45 +12,13 @@
 
         <div id="primary" class="eight columns">
 
-        <article class="post">
-
-            <div class="entry-header cf">
-
-                <h1><a href="<?php the_permalink();?>" title=""><?php the_title();?></a></h1>
-
-                    <p class="post-meta">
-
-                        <time class="date" datetime="2014-01-14T11:24"><?php the_time('F, jS, Y') ?></time>
-                        /
-                        <span class="categories">
-                            <?php the_tags( ' ', ' / ');  ?>
-                        </span>
-
-                    </p>
-
-            </div>
-
-            <div class="post-thumb">
-
-              <?php the_post_thumbnail(); //выводим картинку поста?>
-
-            </div>
-
-            <div class="post-content">
-
-              <?php the_post(); //Устанавливает индексы поста в Цикле WP?>
-
-              <?php the_content(); //Выводит контент текущего поста (записи).?>
-
-            </div>
-
-        </article> <!-- post end -->
+          <?php  get_template_part('post-templates/post', get_post_format()); //Ищет и подключает указанный файл темы?>
 
         </div> <!-- Primary End-->
 
         <div id="secondary" class="four columns end"> 
 
-        <?php get_sidebar(); //sidebar?>
+           <?php get_sidebar(); //sidebar?>
 
 
 

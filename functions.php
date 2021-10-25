@@ -22,6 +22,7 @@ function theme_register_nav_menu() {
     register_nav_menu( 'footer', 'Mеню в подвале' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails', array( 'post' ) );//устанавливает миниатюру посту
+    add_theme_support( 'post-formats', array( 'video', 'aside' ) ); //Позволяет указывать формат посту.
     add_image_size( 'post_thumb', 1300, 500, true );//Регистрирует новый размер картинки (миниатюры)
     add_filter( 'excerpt_more', 'new_excerpt_more' );//Создает ссылку "Читать дальше..." на конце коментария миниатюры после обрезания текста с помощью the_excerpt()
     function new_excerpt_more( $more ){
