@@ -21,7 +21,7 @@ function theme_register_nav_menu() {
 	register_nav_menu( 'top', 'Mеню в шапке' );
     register_nav_menu( 'footer', 'Mеню в подвале' );
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails', array( 'post' ) );//устанавливает миниатюру посту
+    add_theme_support( 'post-thumbnails', array( 'post', 'portfolio' ) );//устанавливает миниатюру посту
     add_theme_support( 'post-formats', array( 'video', 'aside' ) ); //Позволяет указывать формат посту.
     add_image_size( 'post_thumb', 1300, 500, true );//Регистрирует новый размер картинки (миниатюры)
     add_filter( 'excerpt_more', 'new_excerpt_more' );//Создает ссылку "Читать дальше..." на конце коментария миниатюры после обрезания текста с помощью the_excerpt()
@@ -136,12 +136,12 @@ function Generate_iframe( $atts ) {
             'show_in_rest'        => true, // добавить в REST API. C WP 4.7
             'rest_base'           => null, // $post_type. C WP 4.7
             'menu_position'       =>  4,
-            'menu_icon'           => null,
+            'menu_icon'           => 'dashicons-portfolio',
             //'capability_type'   => 'post',
             //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
             //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
             'hierarchical'        => false,
-            'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'supports'            => [ 'title', 'editor', 'author', 'thumbnail', 'excerpt'  ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
             'taxonomies'          => [],
             'has_archive'         => false,
             'rewrite'             => true,
