@@ -142,12 +142,40 @@ function Generate_iframe( $atts ) {
             //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
             'hierarchical'        => false,
             'supports'            => [ 'title', 'editor', 'author', 'thumbnail', 'excerpt'  ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-            'taxonomies'          => [],
+            'taxonomies'          => ['skills'],
             'has_archive'         => false,
             'rewrite'             => true,
             'query_var'           => true,
         ] );
     }
-
-
-?>
+    
+    add_action( 'init', 'create_taxonomy' );
+    function create_taxonomy(){
+        register_taxonomy( 'skills', [ 'portfolio' ], [
+            'label'                 => '', // определяется параметром $labels->name
+            'labels'                => [
+                'name'              => 'Навыки',
+                'singular_name'     => 'Навык',
+                'search_items'      => 'Найти навык',
+                'all_items'         => 'Все навыки',
+                'view_item '        => 'Смотреть навыки',
+                'parent_item'       => 'Родительские навыки',
+                'parent_item_colon' => 'Родительский навык:',
+                'edit_item'         => 'Изменить навык',
+                'update_item'       => 'Обновить навык',
+                'add_new_item'      => 'Добавить новый навык',
+                'new_item_name'     => 'новое имя навыка',
+                'menu_name'         => 'Навыки',
+            ],
+            'description'           => 'Навыки которые использовались', // описание таксономии
+            'public'                => true,
+            'publicly_queryable'    => null, // равен аргументу public
+            'hierarchical'          => false,
+            'rewrite'               => true,
+            'capabilities'          => array(),
+            'meta_box_cb'           => null, 
+            'show_admin_column'     => false, 
+            'show_in_rest'          => null, 
+            'rest_base'             => null, 
+        ] );
+    };

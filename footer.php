@@ -18,11 +18,6 @@
                            ?>
                      </ul>
 
-                     <ul class="copyright">
-                        <li>Copyright &copy; 2014 Sparrow</li> 
-                        <li>Design by <a href="http://www.styleshout.com/">Styleshout</a></li>               
-                     </ul>
-
                   </div>
 
                   <div id="go-top" style="display: block;"><a title="Back to Top" href="#">Go To Top</a></div>
