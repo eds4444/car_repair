@@ -1,8 +1,8 @@
 
 <?php
 /*
-Template Name: Главная
-Template Post Type: home
+Template Name: Get in touch
+Template Post Type: post, page
 */ ?>
 
 <?php get_header(); ?>
@@ -55,45 +55,42 @@ Template Post Type: home
 
    <!-- Info Section
    ================================================== -->
+   
    <section id="info">
 
-      <div class="row">
+        <div class="row">
 
-         <div class="bgrid-quarters s-bgrid-halves">
+            <div class="bgrid-quarters s-bgrid-halves">
+                
+                <div style="text-align: center;"><h2><?php the_field('advice');?></h2><br><br></div>
+                
+                
+                <div class="columns">
+                    <a href=""><img src="<?php the_field('photo1');?>" alt=""></a>
 
-           <div class="columns">
-              <?php the_field('photo1'); ?>
+                    <p><?php the_field('text1');?></p>
+                </div>
 
-              <?php the_field('text1');?>
-           </div>
+                <div class="columns">
+                    <a href=""><img src="<?php the_field('photo2');?>" alt=""></a>
 
-           <div class="columns">
-              <h2>Responsive.</h2>
+                    <p><?php the_field('text2');?></p>
+                </div>
 
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              </p>
-           </div>
+                <div class="columns">
+                    <a href=""><img src="<?php the_field('photo3');?>" alt=""></a>
 
-           <div class="columns s-first">
-              <h2>HTML5 + CSS3.</h2>
+                    <p><?php the_field('text3');?></p>
+                </div>
 
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              </p>
-           </div>
+                <div class="columns">
+                    <a href=""><img src="<?php the_field('photo4');?>" alt=""></a>
 
-           <div class="columns">
-              <h2>Free of Charge.</h2>
+                    <p><?php the_field('text4');?></p>
+                </div>
+            </div>
 
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              </p>
-           </div>
-
-           </div>
-
-      </div>
+        </div>
 
    </section> <!-- Info Section End-->
 

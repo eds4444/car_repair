@@ -199,8 +199,8 @@ header {
 /* header logo */
 header .logo {
    position: absolute;
-   left: 20px;
-   top: 48px;
+   left: 0;
+   top: 0;
 }
 header .logo a {
    display: block;
@@ -208,8 +208,8 @@ header .logo a {
 	padding: 0;
 	border: none;
 	outline: none;
-   width: 113px;
-   height: 24px;
+   width: 200px;
+   height: 50px;
 }
 
 /* primary navigation

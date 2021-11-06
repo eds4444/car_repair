@@ -41,10 +41,12 @@
          <div class="twelve columns">
 
             <div class="logo">
+                    <a href="<?php bloginfo( 'url' ); ?>">
+                    <?php if( has_custom_logo() ): the_custom_logo(); ?>
+                     <?php else: ?>
+                     <a  href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                     <?php endif; ?>
 
-               <a href="<?php bloginfo( 'url' ); ?>">
-                   <div><?php bloginfo( 'name' ); ?></div>
-                  <img alt="" src="images/logo.png"></a>
             </div>
             <nav id="nav-wrap">
 

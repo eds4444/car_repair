@@ -54,11 +54,15 @@
 
          </section> <!-- end section -->
 
-
          <ul class="post-nav cf">
-              <?php $pred_post = get_previous_post(); // получили и записали в переменную объект предыдущего поста
-                echo '<a href="' . get_permalink( $pred_post ) . '"> >> </a>'; ?>
-			</ul>
+               <li class="prev">
+                  <?php previous_post_link( $format = '%link', $link = '<strong>PREVIOUS PORTFOLIO</strong> %title');?>
+               <li class="next">
+                  <?php next_post_link( $format = '%link', $link = '<strong>NEXT PORTFOLIO</strong> %title');?>
+               </li>
+         </ul>
+         
+
 
       </div>
 
