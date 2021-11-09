@@ -1,8 +1,7 @@
-
 <?php
 /*
-Template Name: Главная
-Template Post Type: home
+Template Name: Get in touch
+Template Post Type: post, page
 */ ?>
 
 <?php get_header(); ?>
@@ -61,11 +60,6 @@ Template Post Type: home
 
          <div class="bgrid-quarters s-bgrid-halves">
 
-           <div class="columns">
-              <?php the_field('photo1'); ?>
-
-              <?php the_field('text1');?>
-           </div>
 
            <div class="columns">
               <h2>Responsive.</h2>

@@ -1,12 +1,5 @@
-<?php
-/*
-Template Name: Get in touch
-Template Post Type: post, page
-*/
-?>
-   
-   
-   <?php get_header(); ?>
+
+<?php get_header(); ?>
    <!-- Page Title
    ================================================== -->
    <div id="page-title">

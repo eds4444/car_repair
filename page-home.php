@@ -1,9 +1,9 @@
-
 <?php
 /*
 Template Name: Get in touch
 Template Post Type: post, page
 */ ?>
+
 
 <?php get_header(); ?>
 
