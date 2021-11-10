@@ -7,63 +7,31 @@ Template Post Type: post, page
 
 <?php get_header(); ?>
 
-   <!-- Intro Section
-   ================================================== -->
-   <section id="intro">
+            <div id="page-title">
 
-      <!-- Flexslider Start-->
-	   <div id="intro-slider" class="flexslider">
+               <div class="row">
 
-		   <ul class="slides">
+                  <div class="ten columns centered text-center">
+                     <h1><?php the_field('name_page');?></h1>
 
-			   <!-- Slide -->
-			   <li>
-				   <div class="row">
-					   <div class="twelve columns">
-						   <div class="slider-text">
-							   <h1>Home</h1>
-						   </div>
-                     <div class="slider-image">
-                        <img src="images/sliders/home-slider-image-01.png" alt="" />
-                     </div>
-					   </div>
-				   </div>
-			   </li>
+                  </div>
 
-            <!-- Slide -->
-			   <li>
-				   <div class="row">
-					   <div class="twelve columns">
-						   <div class="slider-text">
-							   <h1>Responsive + HTML5 + CSS3<span>.</span></h1>
-							   <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                        deleniti eos et accusamus. amet consequat enim elit noneas sit amet luctu. lacus sit amet luctus lobortis.
-                        Aenean condimentum, lacus sit amet luctus.</p>
-						   </div>
-                     <div class="slider-image">
-                        <img src="images/sliders/home-slider-image-02.png" alt="" />
-                     </div>
-					   </div>
-				   </div>
-			   </li>
+               </div>
 
-		   </ul>
-
-	   </div> <!-- Flexslider End-->
-
-   </section> <!-- Intro Section End-->
+            </div>
 
    <!-- Info Section
    ================================================== -->
-   
+
    <section id="info">
+        <div style="text-align: center;"><h2><?php the_field('advice');?></h2></div><br><br>
 
-        <div class="row">
 
-            <div class="bgrid-quarters s-bgrid-halves">
-                
-                <div style="text-align: center;"><h2><?php the_field('advice');?></h2><br><br></div>
-                
+        <div class="row">                     
+
+
+            <div class="bgrid-quarters s-bgrid-halves">            
+              
                 
                 <div class="columns">
                     <a href=""><img src="<?php the_field('photo1');?>" alt=""></a>
@@ -101,63 +69,39 @@ Template Post Type: post, page
       <div class="row">
 
          <div class="twelve columns align-center">
-            <h1>Some of our recent works.</h1>
+            <div style="text-align: center;"><h2><?php the_field('title_section');?></h2></div>
          </div>
-
          <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-halves">
 
-    		   <div class="columns portfolio-item">
+    		   
+            <div class="columns portfolio-item">
                <div class="item-wrap">
-    				   <a href="portfolio.html">
-                     <img alt="" src="images/portfolio/geometrics.jpg">
-                     <div class="overlay"></div>
-                     <div class="link-icon"><i class="fa fa-link"></i></div>
-                  </a>
-    					<div class="portfolio-item-meta">
-    					   <h5><a href="portfolio.html">Geometrics</a></h5>
-                     <p>Illustration</p>
+                  <div class="portfolio-item-meta">
+    					   <h5><a href="<?php the_field('tire_fitting');?>"  target="_blank"><?php the_field('name_1');?></a></h5>
     					</div>
                </div>
     			</div>
 
             <div class="columns portfolio-item">
                <div class="item-wrap">
-    				   <a href="portfolio.html">
-                     <img alt="" src="images/portfolio/console.jpg">
-                     <div class="overlay"></div>
-                     <div class="link-icon"><i class="fa fa-link"></i></div>
-                  </a>
-    					<div class="portfolio-item-meta">
-    					   <h5><a href="portfolio.html">Console</a></h5>
-                     <p>Web Development</p>
+                  <div class="portfolio-item-meta">
+    					   <h5><a href="<?php the_field('car_wash');?>"  target="_blank"><?php the_field('name_2');?></a></h5>
     					</div>
                </div>
     			</div>
 
-            <div class="columns portfolio-item s-first">
+             <div class="columns portfolio-item">
                <div class="item-wrap">
-    				   <a href="portfolio.html">
-                     <img alt="" src="images/portfolio/camera-man.jpg">
-                     <div class="overlay"></div>
-                     <div class="link-icon"><i class="fa fa-link"></i></div>
-                  </a>
-    					<div class="portfolio-item-meta">
-    					   <h5><a href="portfolio.html">Camera Man</a></h5>
-                     <p>Photography</p>
+                  <div class="portfolio-item-meta">
+    					   <h5><a href="<?php the_field('car_mall');?>"  target="_blank"><?php the_field('name_3');?></a></h5>
     					</div>
                </div>
     			</div>
 
-            <div class="columns portfolio-item">
+             <div class="columns portfolio-item">
                <div class="item-wrap">
-    				   <a href="portfolio.html">
-                     <img alt="" src="images/portfolio/into-the-light.jpg">
-                     <div class="overlay"></div>
-                     <div class="link-icon"><i class="fa fa-link"></i></div>
-                  </a>
-    					<div class="portfolio-item-meta">
-    					   <h5><a href="portfolio.html">Into The Light</a></h5>
-                     <p>Branding</p>
+                  <div class="portfolio-item-meta">
+    					   <h5><a href="<?php the_field('fuel');?>"  target="_blank"><?php the_field('name_4');?></a></h5>
     					</div>
                </div>
     			</div>
@@ -174,7 +118,7 @@ Template Post Type: post, page
 
       <div class="row">
          <div class="twelve columns align-center">
-            <h1>Our latest posts and rants.</h1>
+             <div style="text-align: center;"><h2><?php the_field('news_name_block');?></h2></div><br><br>          
          </div>
       </div>
 
@@ -295,3 +239,5 @@ Template Post Type: post, page
 
 
      <?php get_footer(); ?>
+
+

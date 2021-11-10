@@ -1,5 +1,19 @@
 <?php get_header(); ?>
 
+        <div id="page-title">
+
+            <div class="row">
+
+                <div class="ten columns centered text-center">
+                    <h1>Our Amazing Works<span>.</span></h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
 <?php // echo get_post_format() //показывает формат поста?>
 
 <?php if ( have_posts()) : while ( have_posts()) : the_post(); //Устанавливает индексы поста в Цикле WP?>
@@ -41,8 +55,7 @@
         <ul id="twitter" class="align-center">
         <li>
             <span>
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
+           
             <a href="#">http://t.co/CGIrdxIlI3</a>
             </span>
             <b><a href="#">2 Days Ago</a></b>
