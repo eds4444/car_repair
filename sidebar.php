@@ -1,7 +1,6 @@
 <aside id="sidebar">
 
-  <?php dynamic_sidebar('left_sidebar');  ?>
+  <?php dynamic_sidebar('rigth_sidebar');  ?>
   
-
 
 </aside>

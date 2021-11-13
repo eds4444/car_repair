@@ -1,4 +1,11 @@
+<?php
+/*
 
+Template name: Contacts
+
+*/
+
+?>
 <?php get_header(); ?>
    <!-- Page Title
    ================================================== -->

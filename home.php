@@ -1,7 +1,6 @@
 <?php
 /*
-Template Name: Get in touch
-Template Post Type: post, page
+Template Name: Home
 */ ?>
 
 
@@ -158,28 +157,29 @@ Template Post Type: post, page
                           <!-- Entry -->
          <article class="row entry">
 
-         <div class="entry-header">
+         
+            <div class="entry-header">
 
-            <div class="permalink">
-               <a href="<?php the_permalink() ?>"><i class="fa fa-link"></i></a>
+                  <div class="permalink">
+                     <a href="<?php the_permalink() ?>"><i class="fa fa-link"></i></a>
+                  </div>
+
+                  <div class="ten columns entry-title pull-right">
+                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  </div>
+
+                  <div class="two columns post-meta end">
+                     <p>
+                     <time datetime="2014-01-31" class="post-date" pubdate=""><?php the_time('F, jS, Y') ?></time>
+                     <span class="dauthor">By <?php the_author(); ?></span>
+                     </p>
+                  </div>
+
             </div>
 
-            <div class="ten columns entry-title pull-right">
-               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            </div>
-
-            <div class="two columns post-meta end">
-               <p>
-               <time datetime="2014-01-31" class="post-date" pubdate=""><?php the_time('F, jS, Y') ?></time>
-               <span class="dauthor">By <?php the_author(); ?></span>
-               </p>
-            </div>
-
-         </div>
-
-         <div class="ten columns offset-2 post-content">
-            <?php the_excerpt(); ?>
-         </div>
+               <div class="ten columns offset-2 post-content">
+                  <?php the_excerpt(); ?>
+               </div>
 
          </article> <!-- Entry End -->
 

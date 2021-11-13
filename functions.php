@@ -74,8 +74,8 @@ function theme_scripts(){
 function register_my_widgets(){
 
 	register_sidebar( array(
-		'name'          => 'Left Sidebar',
-		'id'            => "left_sidebar",
+		'name'          => 'Rigth Sidebar',
+		'id'            => "rigth_sidebar",
         'description'   => 'Описание сайдбара',
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget'  => "</div>\n",
