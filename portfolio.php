@@ -45,38 +45,38 @@ Template Name: Портфолио
             <div id="portfolio-wrapper" class="bgrid-halves cf">
 
 
-                <?php // Получает записи (посты, страницы, вложения) из базы данных по указанным критериям. 
-                    //Можно выбрать любые посты и отсортировать их как угодно.
-                    $posts = get_posts( array(
-                        'numberposts' => 3,
-                        'post_type'   => 'portfolio',
-                        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                    ) );
+                        <?php // Получает записи (посты, страницы, вложения) из базы данных по указанным критериям. 
+                           //Можно выбрать любые посты и отсортировать их как угодно.
+                           $posts = get_posts( array(
+                                 'numberposts' => 3,
+                                 'post_type'   => 'portfolio',
+                                 'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                           ) );
 
-                    foreach( $posts as $post ){
-                        setup_postdata($post);
-                        // формат вывода the_title() ...
-                    ?>
-                        <div class="columns portfolio-item">
-                            <div class="item-wrap">
-                               <a href="<?php the_permalink()//ссылка при клике?>">
-                                <?php the_post_thumbnail(); //картинка ?>
-                                <div class="overlay"></div>
-                                <div class="link-icon"><i class="fa fa-link"></i></div>
-                               </a>
-                            <div class="portfolio-item-meta">
-                                <h5><a href="<?php the_permalink()//ссылка при клике?>"></a><?php  the_title(); //название ?></h5>
-                              <p><?php the_excerpt();  ?></p>
-                            </div>
-                          </div>
-                        </div>
+                           foreach( $posts as $post ){
+                                 setup_postdata($post);
+                                 // формат вывода the_title() ...
+                           ?>
+                                 <div class="columns portfolio-item">
+                                    <div class="item-wrap">
+                                       <a href="<?php the_permalink()//ссылка при клике?>">
+                                       <?php the_post_thumbnail(); //картинка ?>
+                                       <div class="overlay"></div>
+                                       <div class="link-icon"><i class="fa fa-link"></i></div>
+                                       </a>
+                                    <div class="portfolio-item-meta">
+                                       <h5><a href="<?php the_permalink()//ссылка при клике?>"></a><?php  the_title(); //название ?></h5>
+                                       <p><?php the_excerpt();  ?></p>
+                                    </div>
+                                 </div>
+                                 </div>
 
-                    <?php
+                           <?php
 
-                    }
+                           }
 
-                    wp_reset_postdata(); // сброс
-                ?>
+                           wp_reset_postdata(); // сброс
+                        ?>
 
 
                </div>

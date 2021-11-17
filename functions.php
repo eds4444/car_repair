@@ -21,18 +21,18 @@ function theme_register_nav_menu() {
     add_filter( 'excerpt_more', 'new_excerpt_more' );//Создает ссылку "Читать дальше..." на конце коментария миниатюры после обрезания текста с помощью the_excerpt()
     function new_excerpt_more( $more ){
         global $post;
-        return '<a href="'. get_permalink($post) . '">  Читать дальше</a>';
+        return '<a href="'. get_permalink($post) . '" target="_blank">  Читать дальше</a>';
     }
     // удаляет H2 из шаблона пагинации
     add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
     function my_navigation_template( $template, $class ){
-        /*
-        Вид базового шаблона:
+        
+        /*Вид базового шаблона:
         <nav class="navigation %1$s" role="navigation">
             <h2 class="screen-reader-text">%2$s</h2>
             <div class="nav-links">%3$s</div>
-        </nav>
-        */
+        </nav>*/
+        
 
         return '
         <nav class="navigation %1$s" role="navigation">
@@ -44,7 +44,7 @@ function theme_register_nav_menu() {
     // выводим пагинацию
     the_posts_pagination( array(
         'end_size' => 2,
-    ) ); 
+    ) );
 
 }
 
@@ -141,7 +141,9 @@ register_post_type( 'portfolio', [
     'rewrite'             => true,
     'query_var'           => true,
 ] );
+
 }
+
 
 
 add_action( 'init', 'create_taxonomy' );
