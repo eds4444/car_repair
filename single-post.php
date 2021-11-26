@@ -5,7 +5,15 @@
             <div class="row">
 
                 <div class="ten columns centered text-center">
-                    <h1>Our Amazing Works<span>.</span></h1>
+                <h1><?php
+                        $categories = get_the_category();
+                        if($categories){
+                            foreach($categories as $category) {
+                            $out .= '<a href="'.get_category_link($category->term_id ).'">' . $category->name . '</a>, ';
+                        }
+                        echo trim($out, ', ');
+                            }
+                    ?></h1>
 
                 </div>
 
@@ -27,6 +35,8 @@
         <div id="primary" class="eight columns">
 
           <?php  get_template_part('post-templates/post', get_post_format()); //Ищет и подключает указанный файл темы?>
+
+          <?php comments_template(); ?>
 
         </div> <!-- Primary End-->
 
