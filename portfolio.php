@@ -11,7 +11,7 @@ Template Name: Портфолио
       <div class="row">
 
          <div class="ten columns centered text-center">
-            <h1>Our Amazing </h1>
+            <h1>Ou </h1>
 
          </div>
 
