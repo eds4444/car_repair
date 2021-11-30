@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Портфолио
+Template Name: ACF
 */
 ?>
 <?php get_header(); ?>
