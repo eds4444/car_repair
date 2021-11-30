@@ -11,10 +11,9 @@ Template Name: Портфолио
       <div class="row">
 
          <div class="ten columns centered text-center">
-<<<<<<< HEAD
-      =======
+            
             <h1>O </h1>
->>>>>>> 2952efb2aa503f07fa251dac339735b7c096d84b
+
 
          </div>
 
