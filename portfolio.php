@@ -12,7 +12,7 @@ Template Name: Портфолио
 
          <div class="ten columns centered text-center">
 
-            <h1>O </h1>
+            <h1>Oll </h1>
 
 
          </div>
