@@ -40,38 +40,115 @@ Template Name: ACF
                     endwhile;
                     endif;
                 ?>
+                <h1>
+                   текст - <?php the_field('text');  ?><br>
 
-                <?php the_field('text');  ?>
-                <?php the_field('tex_area');  ?>
-                <?php the_field('int');  ?>
-                <?php the_field('range');  ?>
-                <?php the_field('e_mail');  ?>
-                <?php the_field('link');  ?>
-                <?php the_field('password');  ?>
-                <?php the_field('image');  ?>
-                <?php the_field('file');  ?>
-                <?php the_field('editor_wp');  ?>
-                <?php the_field('media');  ?>
-                <?php the_field('select');  ?>
-                <?php the_field('checkbox');  ?>
-                <?php the_field('radio');  ?>
-                <?php the_field('button_group');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
-                <?php the_field('');  ?>
+                   область текста -  <?php the_field('text_area');  ?><br>
 
+                   число -  <?php the_field('int');  ?>$<br>
+
+                   диапазон -  <?php the_field('range');  ?>$<br>
+
+                   почта -  <a href="<?php the_field('email');?>"  target="_blank">email</a><br>
+
+                   ссылка -  <a href="<?php the_field('link');?>"  target="_blank">github</a><br>
+
+                   пароль -  <?php  $pas = get_field('password');
+                                if ($pas != null) {
+                                    echo "hello";
+                                } ?><br><br>
+
+                   изображение - <img src="<?php the_field('image');?>" alt="загрузите фото"><br><br>
+
+                   файл -  <a href="<?php the_field('file');?>"  target="_blank">book</a><br>
+
+                   редактор вп -  <?php the_field('editor_wp');  ?><br>
+
+                   медиа -  <?php the_field('media');?><br>
+
+                   выбор -  <?php the_field('select');?>$<br>
+
+                   флажок -  <?php the_field('checkbox');?>$<br>
+
+                   переключатель -  <?php the_field('radio');  ?>$<br>
+
+                   группа кнопок - <?php the_field('button_group');  ?>$<br>
+
+                   да/нет - <?php  $pas = get_field('yes_no');
+                                if ($pas != null) {
+                                    echo "of corse YES";
+                                }
+                                else {
+                                echo "NO";
+                                }
+                                ?><br><br>
+
+
+
+                    объект записи -
+                            <?php
+                            $post_object = get_field('recording_object');
+                            if( $post_object ): 
+                                $post = $post_object;
+                                setup_postdata( $post );
+                                ?>
+                                <div>
+                                    <h3><a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h3>
+                                    <span><?php the_field('recording_object'); ?></span>
+                                </div>
+                                <?php wp_reset_postdata();  ?>
+                            <?php endif; ?><br>
+
+                    ссылка на страницу -  <a href="<?php the_field('link_to_the_page');?>"  target="_blank">page</a><br><br>   
+
+                    записи - 
+
+                            <?php
+
+                                $post_objects = get_field('records');
+
+                                if( $post_objects ): ?>
+                                    <ul>
+                                    <?php foreach( $post_objects as $post):?>
+                                        <?php setup_postdata($post); ?>
+                                        <li>
+                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                            <span><?php the_field('records'); ?></span>
+                                        </li>
+                                    <?php endforeach; ?>
+                                    </ul>
+                                    <?php wp_reset_postdata();?>
+                                <?php endif;
+
+                            ?>
+
+                    таксономия - <?php
+                                    $terms = get_field('taxonomy');
+                                    if( $terms ): ?>
+                                        <ul>
+                                        <?php foreach( $terms as $term ): ?>
+                                            <li>
+                                                <h2><?php echo esc_html( $term->name ); ?></h2>
+                                                <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"   target="_blank"> Выбранная <?php echo esc_html( $term->name ); ?>таксономия</a><br><br>
+                                            </li>
+                                        <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>  
+
+                    пользователь -  <?php
+                                        $user = get_field("user");
+                                        if( $user ){
+                                        echo $user['display_name'];
+                                        } 
+                                        else {
+                                        echo "no user selected";
+                                        }
+                                     ?> 
+                                                  
+                    
+                 
+                   
+                </h1>
             </div>
 
 
