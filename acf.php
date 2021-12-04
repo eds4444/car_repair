@@ -76,7 +76,7 @@ Template Name: ACF
 
                    да/нет - <?php  $pas = get_field('yes_no');
                                 if ($pas != null) {
-                                    echo "of corse YES";
+                                    echo "of course YES";
                                 }
                                 else {
                                 echo "NO";
