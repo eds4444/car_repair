@@ -8,6 +8,8 @@
       <div class="row">
 
          <div class="ten columns centered text-center">
+         <h1><?php the_title(); //заголовок портфолио?></h1>
+
          </div>
 
       </div>
@@ -23,8 +25,6 @@
          <section class="entry cf">
 
             <div id="secondary"  class="four columns entry-details">
-
-                  <h1><?php the_title(); //заголовок портфолио?></h1>
 
                   <ul class="portfolio-meta-list">
 						   <li><span>Date: </span><?php the_field('project-date'); // подключение кастомных полей ?></li>

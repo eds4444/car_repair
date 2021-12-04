@@ -12,7 +12,7 @@ Template Name: Портфолио
 
          <div class="ten columns centered text-center">
 
-            <h1>Portfolio</h1>
+            <h1><?php  the_field('title') ?></h1>
 
 
          </div>
@@ -31,15 +31,11 @@ Template Name: Портфолио
 
             <div id="secondary"  class="four columns entry-details">
 
-               <h1>Our Portfolio.</h1>
+               <h1><?php  the_field('title_page') ?></h1>
 
-               <p class="lead">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-               nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh.</p>
+               <p class="lead"><?php  the_field('text_page') ?></p>
 
-               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-               nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-               cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
-               ornare odio.</p>
+               
 
             </div> <!-- Secondary End-->
 
@@ -61,13 +57,13 @@ Template Name: Портфолио
                            ?>
                                  <div class="columns portfolio-item">
                                     <div class="item-wrap">
-                                       <a href="<?php the_permalink()//ссылка при клике?>">
+                                       <a href="<?php the_permalink()//ссылка при клике?>"   target="_blank" >
                                        <?php the_post_thumbnail(); //картинка ?>
                                        <div class="overlay"></div>
                                        <div class="link-icon"><i class="fa fa-link"></i></div>
                                        </a>
                                     <div class="portfolio-item-meta">
-                                       <h5><a href="<?php the_permalink()//ссылка при клике?>"></a><?php  the_title(); //название ?></h5>
+                                       <h5><a href="<?php the_permalink()//ссылка при клике?>"  target="_blank"></a><?php  the_title(); //название ?></h5>
                                        <p><?php the_excerpt();  ?></p>
                                     </div>
                                  </div>
@@ -91,42 +87,6 @@ Template Name: Портфолио
 
    </div> <!-- content End-->
 
-   <!-- Tweets Section
-   ================================================== -->
-   <section id="tweets">
-
-      <div class="row">
-
-         <div class="tweeter-icon align-center">
-            <i class="fa fa-twitter"></i>
-         </div>
-
-         <ul id="twitter" class="align-center">
-            <li>
-               <span>
-               This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-               Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-               <a href="#">http://t.co/CGIrdxIlI3</a>
-               </span>
-               <b><a href="#">2 Days Ago</a></b>
-            </li>
-            <!--
-            <li>
-               <span>
-               This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-               Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-               <a href="#">http://t.co/CGIrdxIlI3</a>
-               </span>
-               <b><a href="#">3 Days Ago</a></b>
-            </li>
-            -->
-         </ul>
-
-         <p class="align-center"><a href="#" class="button">Follow us</a></p>
-
-      </div>
-
-   </section> <!-- Tweet Section End-->
 
    <!-- footer
    ================================================== -->
